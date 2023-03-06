@@ -11,12 +11,21 @@ public class CourseCategory {
 	private String categoryID; // 類別的識別碼
 	private String categoryName; // 名稱
 	private String detail; // 細節
-	//Log.info();
+	
+	// 建構子
 	public CourseCategory(String categoryName, String detail) {
 		this.categoryID = UUID.randomUUID().toString();
 		this.categoryName = categoryName;
 		this.detail = detail;
 	}
+
+	@Override
+	public String toString() {
+		return "CourseCategory [categoryID=" + categoryID + ", categoryName=" + categoryName + ", detail=" + detail
+				+ "]";
+	}
+	
+	
 	
 	
 	

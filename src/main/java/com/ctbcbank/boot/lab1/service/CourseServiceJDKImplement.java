@@ -15,10 +15,6 @@ public class CourseServiceJDKImplement implements CourseService {
 		this.courseMap = new HashMap<>();	
 	}
 	
-	
-	
-	
-	
 	@Override
 	public ArrayList<Course> getAllCourses() {
 		return courses;
