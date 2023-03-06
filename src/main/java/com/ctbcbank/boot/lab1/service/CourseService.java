@@ -12,8 +12,8 @@ import com.ctbcbank.boot.lab1.model.CourseCategory;
 
 @Service
 public interface CourseService {
-	public static final ArrayList<Course> courses = new ArrayList<Course>();
-    public static Map<String, Course> courseMap = new HashMap<>();
+	public static ArrayList<Course> courses = new ArrayList<Course>();
+    public static Map<String, Course> courseMap = new HashMap<>(); // UUID, Course
     
     /*
     建構子??
@@ -30,7 +30,7 @@ public interface CourseService {
     boolean removeCourse(String courseId);
     // 依照鍵值與新的值修改,並且傳回修改後的課程
     Course updateCourse(String courseId,String newName, Integer newPrice, String newTeacher,CourseCategory coursecategory);
-	
+    Course testcourseMapget(String courseName);
     
    
 }

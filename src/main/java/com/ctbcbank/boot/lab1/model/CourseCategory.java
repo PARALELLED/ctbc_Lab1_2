@@ -21,14 +21,9 @@ public class CourseCategory {
 
 	@Override
 	public String toString() {
-		return "CourseCategory [categoryID=" + categoryID + ", categoryName=" + categoryName + ", detail=" + detail
-				+ "]";
+		return "CourseCategory {categoryID=[" + categoryID + "], categoryName=[" + categoryName + "], detail=[" + detail
+				+ "]}";
 	}
 	
 	
-	
-	
-	
-	
-
 }

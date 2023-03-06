@@ -8,7 +8,7 @@ import java.util.Map;
 import com.ctbcbank.boot.lab1.model.CourseCategory;
 
 public interface CourseCategoryService {
-	public static final ArrayList<CourseCategory> categories = new ArrayList<CourseCategory>();
+	public static ArrayList<CourseCategory> categories = new ArrayList<CourseCategory>();
 	public static Map<String, CourseCategory> categoryMap = new HashMap<>();
 	
 	// 列出所有的課程

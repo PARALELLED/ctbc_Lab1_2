@@ -26,12 +26,9 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", coursePrice=" + coursePrice
-				+ ", courseTeacher=" + courseTeacher + ", courseCategory=" + courseCategory + "]";
+		return "Course {courseId=" + courseId + ", courseName=" + courseName + ", coursePrice=" + coursePrice
+				+ ", courseTeacher=" + courseTeacher + ", courseCategory=" + courseCategory + "}";
 	}
-	
-	
-	
 	
 //	public Course(String courseName, int coursePrice, String courseTeacher) {
 //		this.courseId = UUID.randomUUID().toString();

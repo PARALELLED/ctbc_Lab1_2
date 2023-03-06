@@ -8,11 +8,13 @@ import com.ctbcbank.boot.lab1.model.Course;
 import com.ctbcbank.boot.lab1.model.CourseCategory;
 
 public class CourseServiceJDKImplement implements CourseService {
-	private Map<String,Course> courseMap;
+	public ArrayList<Course> courses;
+	public Map<String,Course> courseMap;
 	
 	// 建構子?? // 應該要在哪邊初始化才對??
 	public CourseServiceJDKImplement() {
-		this.courseMap = new HashMap<>();	
+		this.courses = new ArrayList<>();
+		this.courseMap = new HashMap<>();
 	}
 	
 	@Override
@@ -24,7 +26,7 @@ public class CourseServiceJDKImplement implements CourseService {
 	public Course addCourse(String courseName, int coursePrice, String courseTeacher,CourseCategory coursecategory) {
 		Course course = new Course(courseName, coursePrice, courseTeacher,coursecategory);
 		courses.add(course);
-		courseMap.put(course.getCourseName(), course);
+		courseMap.put(course.getCourseName(), course); // ex : "Java", course類別
 		return course;
 	}
 
@@ -39,8 +41,12 @@ public class CourseServiceJDKImplement implements CourseService {
 	}
 
 	@Override
-	public Course updateCourse(String courseId, String newName, Integer newPrice, String newTeacher,CourseCategory coursecategory) {
-		Course course = courseMap.get(courseId);
+	public Course updateCourse(String courseName, String newName, Integer newPrice, String newTeacher,CourseCategory coursecategory) {
+		Course course2 = new Course("Java",100,"Mark",(new CourseCategory("Java", "Programming")));
+		courseMap.put("Java", course2);
+		
+		Course course = courseMap.get(courseName); // 拿出一堂課程類別
+		String courseId = course.getCourseId(); // 拿到該類別的ID
 		if (course != null) {
 			if (newName != null) {
 				course.setCourseName(newName);
@@ -56,6 +62,14 @@ public class CourseServiceJDKImplement implements CourseService {
 		}
 		return course;
 
+	}
+
+	@Override
+	public Course testcourseMapget(String courseName) {
+		Course course = new Course("Java",100,"Mark",(new CourseCategory("Java", "Programming")));
+		courseMap.put("Java", course);
+		Course course2 = courseMap.get(courseName); // 拿出一堂課程類別
+		return course2;
 	}
 
 }
