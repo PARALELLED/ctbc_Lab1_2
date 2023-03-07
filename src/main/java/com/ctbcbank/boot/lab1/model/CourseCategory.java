@@ -8,6 +8,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CourseCategory {
+	
+	CourseCategory(){
+		
+	}
+	
 	private String categoryID; // 類別的識別碼
 	private String categoryName; // 名稱
 	private String detail; // 細節

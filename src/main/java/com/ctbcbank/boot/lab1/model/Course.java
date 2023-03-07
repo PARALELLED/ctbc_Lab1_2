@@ -8,6 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Course {
+	
+	
 	private String courseId; // 識別碼
 	private String courseName; // 課程名稱
 	private int coursePrice; // 價錢
@@ -26,8 +28,8 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course {courseId=" + courseId + ", courseName=" + courseName + ", coursePrice=" + coursePrice
-				+ ", courseTeacher=" + courseTeacher + ", courseCategory=" + courseCategory + "}";
+		return "Course {courseId=[" + courseId + "], courseName=[" + courseName + "], coursePrice=[" + coursePrice
+				+ "], courseTeacher=[" + courseTeacher + "], courseCategory=[" + courseCategory + "]}";
 	}
 	
 //	public Course(String courseName, int coursePrice, String courseTeacher) {

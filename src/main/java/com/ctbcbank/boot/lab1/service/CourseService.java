@@ -32,6 +32,5 @@ public interface CourseService {
     Course updateCourse(String courseId,String newName, Integer newPrice, String newTeacher,CourseCategory coursecategory);
     Course testcourseMapget(String courseName);
     
-   
 }
 

@@ -51,6 +51,21 @@ public class CourseCategoryServiceJDKImplement implements CourseCategoryService{
 		}
 		return category;
 	}
+	
+	// Exception
+	public class CategoryIdNotFound extends Exception{
+		public CategoryIdNotFound(String message) {
+			super(message);
+		}
+	}
+	
+	public CourseCategory getCategoryById(String categoryId) throws CategoryIdNotFound{
+	    CourseCategory category = categoryMap.get(categoryId);
+	    if (category == null) {
+	        throw new CategoryIdNotFound("Category ID not found: " + categoryId);
+	    }
+	    return category;
+	}
 
 	
 	

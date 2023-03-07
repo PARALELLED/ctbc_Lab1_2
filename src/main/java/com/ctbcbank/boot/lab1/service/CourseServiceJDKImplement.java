@@ -17,11 +17,16 @@ public class CourseServiceJDKImplement implements CourseService {
 		this.courseMap = new HashMap<>();
 	}
 	
+	// 查詢全部
 	@Override
 	public ArrayList<Course> getAllCourses() {
+		Course course2 = new Course("Java",100,"Mark",(new CourseCategory("Java", "Programming")));
+		courses.add(course2);
+		courseMap.put("Java", course2);
 		return courses;
 	}
-
+	
+	// 新增
 	@Override
 	public Course addCourse(String courseName, int coursePrice, String courseTeacher,CourseCategory coursecategory) {
 		Course course = new Course(courseName, coursePrice, courseTeacher,coursecategory);
@@ -29,17 +34,25 @@ public class CourseServiceJDKImplement implements CourseService {
 		courseMap.put(course.getCourseName(), course); // ex : "Java", course類別
 		return course;
 	}
-
+	
+	// 刪除
 	@Override
 	public boolean removeCourse(String courseId) {
+//		Course course2 = new Course("Java",100,"Mark",(new CourseCategory("Java", "Programming")));
+//		courses.add(course2);
+//		courseMap.put("Java", course2);
+		
 		Course course = courseMap.get(courseId);
 		if (course != null) {
 			courses.remove(course);
 			courseMap.remove(courseId);
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
-
+	
+	// 修改
 	@Override
 	public Course updateCourse(String courseName, String newName, Integer newPrice, String newTeacher,CourseCategory coursecategory) {
 		Course course2 = new Course("Java",100,"Mark",(new CourseCategory("Java", "Programming")));
@@ -71,5 +84,7 @@ public class CourseServiceJDKImplement implements CourseService {
 		Course course2 = courseMap.get(courseName); // 拿出一堂課程類別
 		return course2;
 	}
+	
+
 
 }
