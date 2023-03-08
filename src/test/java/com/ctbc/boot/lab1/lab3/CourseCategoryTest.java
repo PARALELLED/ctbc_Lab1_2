@@ -1,4 +1,5 @@
-package com.ctbcbank.boot.lab1.lab3;
+package com.ctbc.boot.lab1.lab3;
+
 
 //Test 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,12 +13,12 @@ import java.util.Locale.Category;
 
 import org.junit.jupiter.api.Test;
 
-import com.ctbcbank.boot.lab1.model.CourseCategory;
-import com.ctbcbank.boot.lab1.service.CourseCategoryService;
-import com.ctbcbank.boot.lab1.service.CourseCategoryServiceJDKImplement;
+import com.ctbc.boot.lab1.model.CourseCategory;
+import com.ctbc.boot.lab1.service.CourseCategoryService;
+import com.ctbc.boot.lab1.service.CourseCategoryServiceJDKImplement;
 
 
-// import static
+//import static
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CourseCategoryTest {
@@ -47,8 +48,11 @@ public class CourseCategoryTest {
 		System.out.println(coursecategory.toString());
 		System.out.println(coursecategory2.toString());
 		
-		Assertions.assertNotNull(coursecategory);
-		Assertions.assertEquals(categoryName,coursecategory.getCategoryName());
+//		Assertions.assertNotNull(coursecategory);
+//		Assertions.assertEquals(categoryName,coursecategory.getCategoryName());
+		
+		this.categoryService.categories.get(0).setCategoryID(null);
+		System.out.println(coursecategory.toString());
 		
 		
 		

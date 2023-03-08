@@ -1,4 +1,4 @@
-package com.ctbcbank.boot.lab1;
+package com.ctbc.boot.lab1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

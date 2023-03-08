@@ -1,4 +1,4 @@
-package com.ctbcbank.boot.lab1;
+package com.ctbc.boot.lab1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
